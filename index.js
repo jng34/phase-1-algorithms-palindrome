@@ -1,9 +1,22 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  let wordArr = word.split('');
+  let backWordArr = [];
+
+  for (let i=wordArr.length-1; i>=0; i--) {
+    backWordArr.push(wordArr[i]);
+  }
+
+  let reverseWord = backWordArr.join('');
+
+  return word === reverseWord ? true : false;
 }
+
+console.log(isPalindrome('same'));
 
 /* 
   Add your pseudocode here
+  
 */
 
 /*
